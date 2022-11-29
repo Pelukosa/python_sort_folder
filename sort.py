@@ -2,7 +2,7 @@ import os
 import pathlib
 
 sorter_file_name = os.path.basename(__file__)
-root = os.getcwd() + "/"
+root = os.getcwd() + "/example_folder/"
 
 images = ['jpg', 'png', 'gif', 'jpeg']
 video = ['mp4', 'mov', 'wmv', 'flv', 'avi']
@@ -29,6 +29,9 @@ def getFolderNameByExtension(extension):
 
 
 for entry in os.scandir(root):
+     if (entry.name == sorter_file_name):
+          continue
+
      if entry.is_dir():
           typ = 'dir'
      elif entry.is_file():

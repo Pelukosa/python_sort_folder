@@ -1,7 +1,8 @@
 import os
 import pathlib
 
-root = 'example_folder/'
+sorter_file_name = os.path.basename(__file__)
+root = os.getcwd() + "/"
 
 images = ['jpg', 'png', 'gif', 'jpeg']
 video = ['mp4', 'mov', 'wmv', 'flv', 'avi']

@@ -10,6 +10,7 @@ doc = ['doc', 'docx', 'pdf']
 sheet = ['xls', 'xlsx']
 install = ['exe']
 compressed = ['zip', 'rar']
+text = ['txt']
 
 def getFolderNameByExtension(extension):
      if extension in images:
@@ -24,6 +25,8 @@ def getFolderNameByExtension(extension):
           return "Installables"
      elif extension in compressed:
           return "Compressed"
+     elif extension in text:
+          return "Text"
      else:
           return "Unknown"
 
